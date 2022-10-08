@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+      }
+      /* * {
+        border: 1px solid black;
+      } */
+      .flex {
+        display: flex;
+      }
+      .baiSe {
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+          rgba(0, 0, 0, 0.23) 0px 3px 6px;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .row {
+        flex-direction: row;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+      .daohang {
+        padding: 10px 20px;
+        border-bottom: 1px solid rgb(190, 190, 190);
+        font-size: 14px;
+        color: #666;
+      }
+      /* 小屏幕模式 */
+      @media (max-width: 600px) {
+        .ceBian {
+          display: none;
+        }
+        .neiRong {
+          flex-direction: column;
+        }
+        .shuJuQu {
+          flex-direction: column;
+        }
+      }
+      .heiSe {
+        background-color: black;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        padding: 12px 16px;
+        z-index: 1;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      .smallRA {
+        width: 13px;
+        height: 13px;
+        border: 1px solid #0f1520;
+        border-top: none;
+        border-left: none;
+        transform: rotate(45deg);
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!-- 侧边栏 -->
+    <div style="width: 200px; z-index: 2" class="baiSe ceBian">
+      <!-- 头像栏 -->
+      <div
+        style="
+          padding: 10px;
+          align-items: center;
+          justify-items: center;
+          border-bottom: 1px solid #999;
+        "
+        class="flex"
+      >
+        <img
+          src="https://img.zcool.cn/community/01c9a75999622700000021296d2bd6.jpg@1280w_1l_2o_100sh.jpg"
+          width="40px"
+          height="40px"
+          alt=""
+        />
+        <div style="margin-left: 10px">MONO</div>
+      </div>
+      <!-- 导航栏 -->
+      <div class="flex1">
+        <div class="daohang">下午茶</div>
+        <div class="daohang">电子杂志</div>
+        <div class="daohang dropdown flex row">
+          <span>发现</span>
+          <div class="smallRA"></div>
+          <div class="dropdown-content">
+            <p>小组推荐</p>
+            <p>随机入口</p>
+            <p>编辑推荐</p>
+          </div>
+        </div>
+        <div class="daohang">社区</div>
+        <div class="daohang">我的</div>
+      </div>
+    </div>
+    <!-- 主边框 -->
+    <div class="flex1 flex column">
+      <!-- 头部栏 -->
+      <div style="height: 60px; z-index: 1" class="baiSe"></div>
+      <!-- 内容区 -->
+      <div style="overflow: auto" class="flex1 flex neiRong">
+        <!-- 左区 -->
+        <div style="flex: 3" class="flex column mg8">
+          <!-- 数据区 -->
+          <div class="flex shuJuQu">
+            <!-- 数据块 -->
+            <div
+              style="
+                height: 100px;
+                align-items: center;
+                justify-items: center;
+                border-bottom: 1px solid #999;
+              "
+              class="flex1 baiSe mgr8 flex"
+            >
+              <img
+                src="https://img.zcool.cn/community/01c9a75999622700000021296d2bd6.jpg@1280w_1l_2o_100sh.jpg"
+                width="40px"
+                height="40px"
+                alt=""
+              />
+              <div>
+                <div style="margin-left: 10px">MONO</div>
+                <div style="margin-left: 10px">MONO</div>
+              </div>
+            </div>
+            <div
+              style="
+                height: 100px;
+                align-items: center;
+                justify-items: center;
+                border-bottom: 1px solid #999;
+              "
+              class="flex1 baiSe mgr8 flex"
+            >
+              <img
+                src="https://img.zcool.cn/community/01c9a75999622700000021296d2bd6.jpg@1280w_1l_2o_100sh.jpg"
+                width="40px"
+                height="40px"
+                alt=""
+              />
+              <div>
+                <div style="margin-left: 10px">MONO</div>
+                <div style="margin-left: 10px">MONO</div>
+              </div>
+            </div>
+            <div
+              style="
+                height: 100px;
+                align-items: center;
+                justify-items: center;
+                border-bottom: 1px solid #999;
+              "
+              class="flex1 baiSe mgr8 flex"
+            >
+              <img
+                src="https://img.zcool.cn/community/01c9a75999622700000021296d2bd6.jpg@1280w_1l_2o_100sh.jpg"
+                width="40px"
+                height="40px"
+                alt=""
+              />
+              <div>
+                <div style="margin-left: 10px">MONO</div>
+                <div style="margin-left: 10px">MONO</div>
+              </div>
+            </div>
+            <div
+              style="
+                height: 100px;
+                align-items: center;
+                justify-items: center;
+                border-bottom: 1px solid #999;
+              "
+              class="flex1 baiSe mgr8 flex"
+            >
+              <img
+                src="https://img.zcool.cn/community/01c9a75999622700000021296d2bd6.jpg@1280w_1l_2o_100sh.jpg"
+                width="40px"
+                height="40px"
+                alt=""
+              />
+              <div>
+                <div style="margin-left: 10px">MONO</div>
+                <div style="margin-left: 10px">MONO</div>
+              </div>
+            </div>
+          </div>
+          <!-- 列表区 -->
+          <div class="flex column">
+            <!-- 列表项 -->
+            <div style="height: 160px" class="baiSe mgt8">
+              <img
+                src="https://img.zcool.cn/community/0119765d77cc52a801211d53b63aba.png@1280w_1l_2o_100sh.png"
+                height="160px"
+                alt=""
+              />
+            </div>
+            <div style="height: 160px" class="baiSe mgt8">
+              <img
+                src="https://img.zcool.cn/community/0119765d77cc52a801211d53b63aba.png@1280w_1l_2o_100sh.png"
+                height="160px"
+                alt=""
+              />
+            </div>
+            <div style="height: 160px" class="baiSe mgt8">
+              <img
+                src="https://img.zcool.cn/community/0119765d77cc52a801211d53b63aba.png@1280w_1l_2o_100sh.png"
+                height="160px"
+                alt=""
+              />
+            </div>
+            <div style="height: 160px" class="baiSe mgt8"></div>
+            <div style="height: 160px" class="baiSe mgt8"></div>
+            <div style="height: 160px" class="baiSe mgt8"></div>
+          </div>
+        </div>
+        <!-- 右区 -->
+        <div style="flex: 1" class="flex column">
+          <!-- 提示区 -->
+          <div style="height: 150px" class="baiSe mgt8"></div>
+          <!-- 消息区 -->
+          <div style="height: 300px" class="baiSe mgt8"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
